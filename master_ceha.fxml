@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="555.0" prefWidth="796.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Новые заказы">
+            <content>
+                  <VBox>
+                     <children>
+                        <MenuBar>
+                          <menus>
+                            <Menu disable="true" mnemonicParsing="false" text="Заказать комплектующие" />
+                          </menus>
+                        </MenuBar>
+                        <TableView layoutX="36.0" prefHeight="522.0" prefWidth="796.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn prefWidth="117.0" text="Артикул" />
+                            <TableColumn prefWidth="377.0" text="Наименование" />
+                              <TableColumn prefWidth="149.0" text="Количество" />
+                              <TableColumn prefWidth="152.0" text="Время производства" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+            </content>
+          </Tab>
+          <Tab text="В ожидании поставки">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <MenuBar>
+                          <menus>
+                            <Menu mnemonicParsing="false" text="Обновить">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                              </items>
+                            </Menu>
+                          </menus>
+                        </MenuBar>
+                        <TableView prefHeight="498.0" prefWidth="796.0">
+                          <columns>
+                              <TableColumn prefWidth="57.0" text="Артикул" />
+                            <TableColumn prefWidth="283.0" text="Наименование" />
+                            <TableColumn prefWidth="90.0" text="Количество" />
+                              <TableColumn prefWidth="140.0" text="Время производства" />
+                              <TableColumn prefWidth="225.0" text="Комплектующие" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+            <Tab text="В производстве">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <MenuBar>
+                           <menus>
+                              <Menu mnemonicParsing="false" text="Следующий" />
+                              <Menu mnemonicParsing="false" text="Предыдущий" />
+                              <Menu mnemonicParsing="false" text="Фильтр">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Все" />
+                                    <MenuItem mnemonicParsing="false" text="Готовы" />
+                                    <MenuItem mnemonicParsing="false" text="Сборка" />
+                                    <MenuItem mnemonicParsing="false" text="Сборка завершена" />
+                                </items>
+                              </Menu>
+                           </menus>
+                        </MenuBar>
+                        <TableView prefHeight="503.0" prefWidth="740.0">
+                           <columns>
+                              <TableColumn prefWidth="57.0" text="Артикул" />
+                              <TableColumn prefWidth="174.0" text="Наименование" />
+                              <TableColumn prefWidth="93.0" text="Количество" />
+                              <TableColumn prefWidth="77.0" text="Время производства" />
+                              <TableColumn prefWidth="277.0" text="Комплектующие" />
+                              <TableColumn prefWidth="117.0" text="Статус" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
