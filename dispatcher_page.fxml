@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="520.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="504.0" prefWidth="875.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TabPane prefHeight="494.0" prefWidth="875.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="План продаж">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="509.0" prefWidth="961.0">
+                           <children>
+                              <TableView layoutY="24.0" prefHeight="470.0" prefWidth="875.0">
+                                 <columns>
+                                    <TableColumn prefWidth="246.3999908566475" text="Артикул" />
+                                    <TableColumn prefWidth="458.40003967285156" text="Наименование" />
+                                    <TableColumn prefWidth="170.39990234375" text="Количество" />
+                                 </columns>
+                              </TableView>
+                              <HBox layoutY="1.0" prefHeight="26.0" prefWidth="875.0">
+                                 <children>
+                                    <MenuBar prefHeight="26.0" prefWidth="892.0">
+                                       <menus>
+                                          <Menu mnemonicParsing="false" text="Получить" />
+                                          <Menu disable="true" mnemonicParsing="false" text="Создать список заказов" />
+                                       </menus>
+                                    </MenuBar>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Заказы">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="476.0" prefWidth="875.0">
+                           <children>
+                              <TableView layoutX="1.0" layoutY="24.0" prefHeight="447.0" prefWidth="875.0">
+                                 <columns>
+                                    <TableColumn prefWidth="118.39999234676361" text="Артикул" />
+                                    <TableColumn prefWidth="172.0" text="Наименование" />
+                                    <TableColumn prefWidth="101.60003662109375" text="Количество" />
+                                    <TableColumn prefWidth="152.00006103515625" text="Время производства" />
+                                    <TableColumn prefWidth="124.7999267578125" text="Дата сдачи" />
+                                    <TableColumn prefWidth="132.0" text="Статус" />
+                                    <TableColumn prefWidth="72.0" text="Приоритет" />
+                                 </columns>
+                              </TableView>
+                              <HBox layoutX="1.0" layoutY="-2.0" prefHeight="26.0" prefWidth="875.0" spacing="10.0">
+                                 <children>
+                                    <MenuBar cacheShape="false" centerShape="false" depthTest="DISABLE" prefHeight="26.0" prefWidth="877.0" scaleShape="false">
+                                       <menus>
+                                          <Menu mnemonicParsing="false" text="Добавить" />
+                                          <Menu mnemonicParsing="false" text="Изменить" />
+                                          <Menu mnemonicParsing="false" text="Удалить" />
+                                          <Menu mnemonicParsing="false" text="Обновить" />
+                                          <Menu mnemonicParsing="false" text="Фильтр">
+                                            <items>
+                                              <MenuItem mnemonicParsing="false" text="Все заказы" />
+                                                <MenuItem mnemonicParsing="false" text="Созданные" />
+                                                <MenuItem mnemonicParsing="false" text="Запланированные" />
+                                                <MenuItem mnemonicParsing="false" text="В производстве" />
+                                                <MenuItem mnemonicParsing="false" text="Завершенные" />
+                                            </items>
+                                          </Menu>
+                                          <Menu mnemonicParsing="false" text="Запланировать " />
+                                       </menus>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </MenuBar>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
